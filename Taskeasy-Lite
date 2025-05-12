@@ -1,0 +1,33 @@
+<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskMaster Pro - Your Ultimate Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>TaskMaster Pro</h1>
+
+    <p id="welcomeMessage">What do you need to accomplish today?</p>
+
+    <input type="text" id="taskInput" placeholder="Enter a new task...">
+    <input type="date" id="taskDate">
+    
+    <select id="taskPriority">
+        <option value="High">🔥 High Priority</option>
+        <option value="Medium">⚡ Medium Priority</option>
+        <option value="Low">✅ Low Priority</option>
+    </select>
+
+    <button onclick="addTask()">Add Task</button>
+
+    <ul id="taskList"></ul>
+
+    <button class="clear-btn" onclick="clearTasks()">Clear All Tasks</button>
+
+    <footer>© 2025 TaskMaster Pro. Created by Vasilis. All Rights Reserved.</footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
