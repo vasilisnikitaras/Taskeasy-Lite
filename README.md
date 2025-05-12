@@ -1,0 +1,1 @@
+💡 Example for Netlify: "Taskeasy Lite is a sleek and simple task manager designed to help you stay on top of your goals effortlessly! Easily add, prioritize, and manage tasks with a clean, interactive UI." 🚀 This keeps it short, engaging, and easy to understand!
