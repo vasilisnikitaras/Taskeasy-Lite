@@ -3,9 +3,12 @@ window.onload = function() {
     let taskDate = document.getElementById("taskDate");
     let taskPriority = document.getElementById("taskPriority");
     let taskList = document.getElementById("taskList");
+    let addTaskBtn = document.getElementById("addTaskBtn"); // Explicitly target "Add Task"
+    let clearTaskBtn = document.querySelector(".clear-btn");
 
-    document.querySelector("button").addEventListener("click", addTask);
-    document.querySelector(".clear-btn").addEventListener("click", clearTasks);
+    // Ensure event listeners are properly assigned
+    addTaskBtn.addEventListener("click", addTask);
+    clearTaskBtn.addEventListener("click", clearTasks);
 
     function addTask() {
         let taskValue = taskInput.value.trim();
@@ -32,11 +35,17 @@ window.onload = function() {
             taskInput.value = "";
             taskDate.value = "";
             taskPriority.selectedIndex = 0;
+        } else {
+            alert("Please enter a task before adding!");
         }
     }
 
     function clearTasks() {
-        taskList.innerHTML = "";
+        if (taskList.children.length > 0) {
+            taskList.innerHTML = "";
+        } else {
+            alert("No tasks to clear!");
+        }
     }
 
     function playCompletionSound() {
