@@ -1,55 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TaskMaster Pro - Your Ultimate Task Manager</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Taskeasy Lite</title>
+
+  <!-- Styles and Fonts -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="manifest" href="manifest.json" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
 </head>
-<body>
 
-<!-- Back to Home Button -->
-<button onclick="window.location.href='https://vasilisnikitaras.github.io/vasilis-portfolio/'">
-    Back to Home
-</button>
-
-<h1>TaskMaster Pro</h1>
-
-<p id="welcomeMessage">What do you need to accomplish today?</p>
-
-<input type="text" id="taskInput" placeholder="Enter a new task...">
-<input type="date" id="taskDate">
-
-<select id="taskPriority">
-    <option value="High">🔥 High Priority</option>
-    <option value="Medium">⚡ Medium Priority</option>
-    <option value="Low">✅ Low Priority</option>
-</select>
-
-<!-- Add Task button now includes an ID -->
-<button id="addTaskBtn">Add Task</button>
-
-<ul id="taskList"></ul>
-
-<!-- Clear Tasks button remains the same -->
-<button class="clear-btn">Clear All Tasks</button>
-
-<footer>© 2025 TaskMaster Pro. Created by Vasilis. All Rights Reserved.</footer>
-
-<script src="script.js"></script>
-
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7384081751053780"
-     crossorigin="anonymous"></script>
-<!-- VasiVerse_ContentAds_2 -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-7384081751053780"
-     data-ad-slot="6952267561"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
-</body>
-</html>
+<body data-lang="en">
+  <!-- Header Controls -->
+  <div class="controls">
+    <button id="theme-toggle">🌞 Light Mode</button>
+    <button id="lang-toggle">FR 🇫🇷</button>
+    <button onclick="window.location.href='https://vasilisnikitaras.github.io/vasilis-portfolio
