@@ -1,85 +1,156 @@
+/* === Global Styles === */
 body {
-    font-family: 'Poppins', sans-serif;
-    text-align: center;
-    background-color: #f9f9f9;
-    color: #333;
-    transition: background 0.5s ease-in-out;
+  font-family: 'Inter', 'Poppins', sans-serif;
+  text-align: center;
+  background-color: #f9f9f9;
+  color: #333;
+  margin: 0;
+  padding: 1rem;
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 h1 {
-    color: #005f73;
-    font-size: 28px;
-    animation: fadeIn 1s ease-in-out;
+  color: #005f73;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  animation: fadeIn 1s ease-in-out;
 }
 
 #welcomeMessage {
-    font-size: 18px;
-    color: #666;
-    margin-bottom: 15px;
-    animation: fadeIn 1.5s ease-in-out;
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 1.2rem;
+  animation: fadeIn 1.5s ease-in-out;
 }
 
-input, select, button {
-    margin: 10px;
-    padding: 12px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+/* === Form Elements === */
+input[type="text"],
+input[type="date"],
+select,
+button {
+  padding: 0.6rem 1rem;
+  margin: 0.5rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  height: 2.6rem;
+  box-sizing: border-box;
 }
 
 button {
-    background-color: #008cba;
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    transition: transform 0.2s ease-in-out;
+  background-color: #008cba;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
 }
 
 button:hover {
-    background-color: #005f73;
-    transform: scale(1.05);
+  background-color: #005f73;
+  transform: scale(1.05);
 }
 
+/* === List === */
 ul {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
 }
 
 li {
-    padding: 12px;
-    margin: 6px 0;
-    background-color: #ffffff;
-    border-radius: 6px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: background 0.2s ease-in-out;
-}
-
-li.completed {
-    text-decoration: line-through;
-    color: gray;
-    background-color: #f0f0f0;
+  background-color: #ffffff;
+  margin: 6px 0;
+  padding: 12px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.2s;
 }
 
 li:hover {
-    background-color: #e0f7fa;
+  background-color: #e0f7fa;
+}
+
+li.completed {
+  text-decoration: line-through;
+  color: #888;
+  background-color: #f0f0f0;
+}
+
+/* === Buttons inside Tasks === */
+.delete-btn,
+.edit-btn {
+  padding: 6px 10px;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 0.5rem;
 }
 
 .delete-btn {
-    background-color: red;
-    color: white;
-    border: none;
-    padding: 6px;
-    cursor: pointer;
-    transition: background 0.2s ease-in-out;
+  background-color: #e74c3c;
+  color: #fff;
 }
 
 .delete-btn:hover {
-    background-color: darkred;
+  background-color: #c0392b;
 }
 
+/* === Toggle Controls === */
+.controls {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.task-controls {
+  margin-top: 1rem;
+}
+
+/* === Dark Theme === */
+body.dark-theme {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+.dark-theme input,
+.dark-theme select,
+.dark-theme button {
+  background-color: #1e1e1e;
+  color: #ffffff;
+  border: 1px solid #444;
+}
+
+.dark-theme li {
+  background-color: #1c1c1c;
+}
+
+.dark-theme li:hover {
+  background-color: #2a2a2a;
+}
+
+.dark-theme li.completed {
+  color: #777;
+  background-color: #2b2b2b;
+}
+
+.dark-theme h1 {
+  color: #bb86fc;
+}
+
+/* === Footer === */
+footer {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+/* === Fade-in Animation === */
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
