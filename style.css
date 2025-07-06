@@ -154,3 +154,14 @@ footer {
   from { opacity: 0; }
   to { opacity: 1; }
 }
+
+@media (max-width: 480px) {
+  .task-buttons {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .task-buttons button {
+    flex: 1 1 45%;
+  }
+}
